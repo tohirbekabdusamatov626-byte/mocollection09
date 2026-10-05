@@ -1,23 +1,30 @@
-import { SignInButton, SignUpButton } from '@clerk/react';
+import { SignInButton, SignUpButton } from "@clerk/react";
+import heroImg from "../assets/shessimg.jpg";
 
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-center py-24 px-4 text-center">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-        Collection App'ga Xush Kelibsiz
+    <div
+      className="relative flex flex-col items-center justify-center min-h-screen px-4 text-center bg-cover"
+      style={{
+        backgroundImage: `url(${heroImg})`,
+        backgroundPosition: "center 75%",
+      }}
+    >
+      <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+        Chess Boardga Xush Kelibsiz
       </h1>
-      <p className="text-lg text-gray-600 max-w-xl mb-8">
-        Shaxsiy kolleksiyangizni yarating, saqlang va boshqaring.
-        Kirish yoki ro'yxatdan o'ting va boshlang.
+      <p className="text-lg text-white max-w-xl mb-8">
+        ChessBoardda shaxmatni o'rganing . Kirish yoki ro'yxatdan o'ting va
+        boshlang.
       </p>
       <div className="flex flex-wrap gap-4 justify-center">
         <SignUpButton mode="modal">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+          <button className="px-6 py-3 bg-gray-900 text-white rounded-lg ">
             Boshlash
           </button>
         </SignUpButton>
         <SignInButton mode="modal">
-          <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition font-medium">
+          <button className="px-6 py-3 bg-white text-black rounded-lg">
             Kirish
           </button>
         </SignInButton>

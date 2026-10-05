@@ -1,4 +1,4 @@
-import { useUser } from '@clerk/react';
+import { useUser } from "@clerk/react";
 
 function Dashboard() {
   const { user } = useUser();
@@ -7,7 +7,7 @@ function Dashboard() {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">
-          Salom, {user?.firstName || user?.username || 'foydalanuvchi'}!
+          Salom, {user?.firstName || user?.username || "foydalanuvchi"}!
         </h1>
         <p className="text-gray-600 mt-1">
           Bu sizning shaxsiy kolleksiya boshqaruv panelingiz.

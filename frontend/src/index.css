@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  /* ChessBord UI Palitrasi */
+  --color-deep-indigo: #1a1a2e; /* Asosiy to'q fon va kontrast */
+  --color-charcoal: #333333; /* Matnlar va kichik elementlar */
+  --color-gold-accent: #c6a971; /* Premium elementlar va yutuqlar */
+  --color-cream-paper: #f4f4f4; /* Ochiq rangli shaxmat kataklari va card fonlari */
+  --color-forest-green: #2e7d32; /* Muvaffaqiyatli yurish va statuslar */
+}
