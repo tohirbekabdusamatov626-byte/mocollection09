@@ -2,6 +2,8 @@ import { useAuth } from "@clerk/react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import Board from "./components/Board";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const { isLoaded, isSignedIn } = useAuth();
@@ -17,7 +19,9 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
-      <main className="flex-1">{isSignedIn ? <Dashboard /> : <Home />}</main>
+      <Board />
+      <Sidebar />
+      <main className="flex-1">{isSignedIn ? <Dashboard /> : <Home />}</main >
     </div>
   );
 }

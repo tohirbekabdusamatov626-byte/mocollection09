@@ -1,10 +1,13 @@
 import { useUser } from "@clerk/react";
+import heroImg from "../assets/shessimg.jpg";
+
 
 function Dashboard() {
   const { user } = useUser();
 
   return (
     <div className="container mx-auto px-4 py-8">
+    
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">
           Salom, {user?.firstName || user?.username || "foydalanuvchi"}!
@@ -14,7 +17,7 @@ function Dashboard() {
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-800 p-8 text-center">
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
           Hozircha hech narsa yo'q
         </h2>
@@ -22,7 +25,7 @@ function Dashboard() {
           Keyingi darslarda bu yerga kolleksiya elementlarini qo'shamiz.
         </p>
       </div>
-    </div>
+    </div >
   );
 }
 

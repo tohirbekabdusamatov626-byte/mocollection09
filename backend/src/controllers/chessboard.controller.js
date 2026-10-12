@@ -3,7 +3,6 @@ const prisma = require("../prisma");
 const getAll = async (req, res, next) => {
   try {
     const items = await prisma.chessBoard.findMany({
-      where: { userId: req.userId },
       orderBy: { createdAt: "desc" },
     });
     res.json({ success: true, data: items });
@@ -19,9 +18,7 @@ const getById = async (req, res, next) => {
       return res.status(400).json({ success: false, error: "Invalid id" });
     }
 
-    const item = await prisma.chessBoard.findFirst({
-      where: { id, userId: req.userId },
-    });
+    const item = await prisma.chessBoard.findFirst();
 
     if (!item) {
       return res.status(404).json({ success: false, error: "Tog' topilmadi" });
