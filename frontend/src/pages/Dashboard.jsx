@@ -1,5 +1,7 @@
 import { useUser } from "@clerk/react";
 import heroImg from "../assets/shessimg.jpg";
+import Board from "../components/Board";
+import Sidebar from "../components/Sidebar";
 
 
 function Dashboard() {
@@ -17,13 +19,9 @@ function Dashboard() {
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-800 p-8 text-center">
-        <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          Hozircha hech narsa yo'q
-        </h2>
-        <p className="text-gray-500 mb-6">
-          Keyingi darslarda bu yerga kolleksiya elementlarini qo'shamiz.
-        </p>
+      <div className="flex items-center justify-center gap-4">
+        <Board />
+        <Sidebar />
       </div>
     </div >
   );
